@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Inicio</title>
+        <link rel="stylesheet" href="./css/estilos.css" type="text/css">
+        <link rel="stylesheet" href="./css/responsive.css" type="text/css">
+        <link rel="stylesheet" href="./css/book.css" type="text/css">
+        <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+        <meta charset="UTF-8">
+        <meta name="description" content="Club para los amantes del café.">
+        <meta name="keywords" content="Club,Café,Julián Marcilla,Tienda">
+        <meta name="author" content="David F.F.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Playball" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1>Para los Amantes del Buen Café</h1>
+        </header>
+            <nav class="topnav" id="myTopnav">
+                <a id="inicio" href="./inicio.html">Inicio</a>
+                <a id="cafe" class="active" href="./ncafes.html">Nuestros Cafés</a>
+                <a id="regalar" href="./regalar.html">Ideas para Regalar</a>
+                <a id="contacto" href="./contacto.html">Contacto</a>
+                <a id="partners" href="./partners.html">Partners</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+            </nav>
+            <main>
+                <div id="arabica">
+                    <img class="cafes" id="arabicaL" src="img/tipos/ArabicaLavada.jpg"/>
+                    <img class="cafes" id="arabicaN" src="img/tipos/ArabicaNoLavada.jpg"/>
+                </div>
+                <div id="otros">
+                    <img class="cafes" id="robusta" src="img/tipos/Robusta.jpg"/>
+                    <img class="cafes" id="caracolillo" src="img/tipos/Caracolillo.jpeg"/>
+                </div>
+
+                <div class="component">
+
+                    <ul id="libro" class="align">
+                        <li>
+                            <figure class='book'>
+        
+                                <!-- Portada -->
+        
+                                <ul class='hardcover_front'>
+                                    <li>
+                                        <div class="coverDesign">
+                                            <img src="img/cover.jpg" alt="" width="100%" height="100%">
+                                        </div>
+                                    </li>
+                                    <li><p id="contenido"></p></li>
+                                </ul>
+        
+                                <!-- Paginas -->
+        
+                                <ul class='page'>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+        
+                                <!-- Contraportada -->
+        
+                                <ul class='hardcover_back'>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <ul class='book_spine'>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </figure>
+                        </li>
+                    </ul>
+                </div>
+            </main>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+
+            $('#arabicaL').click(function(){
+                $('.book > .hardcover_front').css({'transform' : 'rotateY(-145deg) translateZ(0)', 'z-index' : '0'});
+                $('p#contenido').html("<h1>Arábica Lavado</h1>Son grandes granos, de forma elíptica, de coloración verde-azulada y olor a " +
+                                      "verde. Tostado desarrolla grandemente su volumen y en la taza es un café " +    
+                                      "aromático de excelente sabor. Se produce fundamentalmente en países centroamericanos y " +
+                                      "esteafricanos.")
+            });
+
+            $('#arabicaN').click(function(){
+                $('.book > .hardcover_front').css({'transform' : 'rotateY(-145deg) translateZ(0)', 'z-index' : '0'});
+                $('p#contenido').html("<h1>Arábica no Lavado</h1>Cultivado básicamente en Brasil, su cultivo se inició en 1732 en las entonces colonias " +
+                                      "portuguesas de Pará, Amazonas y Marañón. En 1760 se introdujeron cafetos " +
+                                      "procedentes de la colonia portuguesa de Goa, en la India. Son granos ovalados, " +
+                                      "de coloración verde amarillenta y olor a hierba verde, con sabores muy " +
+                                      "variados en función de la región de cultivo. Son típicos los Río, " +
+                                      "Riados y Riozonas por su característico y acusado sabor que recuerda el yodo.")
+            });
+
+            $('#robusta').click(function(){
+                $('.book > .hardcover_front').css({'transform' : 'rotateY(-145deg) translateZ(0)', 'z-index' : '0'});
+                $('p#contenido').html("<h1>Robusta</h1>(destacan las variedades Conilón, Kouilloi, Niaouli, Uganda...) aportan un 30% a la " +
+                                      "producción mundial. Especie “descubierta” al observar que era inmune a la plaga de hongos " +
+                                      "Hemiliea Vastatrix que diezma a los arábicas, de ahí le viene el nombre. Originarios del Zaire, " +
+                                      "los principales cultivos están en zonas bajas y secas de África, Indochina y Brasil. Son " +
+                                      "cafés con un mayor contenido de cafeína, del 2 al 4%. Presenta un grano redondo, " +
+                                      "regular, de color marrón amarillento y con olor a paja seca. El tueste es normal y da " +
+                                      "lugar a un café fuerte, de gran cuerpo, de color oscuro y de fuerte sabor con un " +
+                                      "punto amargo que se pega al paladar. Café normalmente tratado en seco –no " +
+                                      "lavado-, que comporta la posible presencia de tierra en las hendiduras y otros defectos.")
+            });
+
+            $('#caracolillo').click(function(){
+                $('.book > .hardcover_front').css({'transform' : 'rotateY(-145deg) translateZ(0)', 'z-index' : '0'});
+                $('p#contenido').html("<h1>Caracolillo</h1>(peaberry, caracoli o pearlcaffe). No es ninguna variedad, pero sí un tipo especial de " +
+                                      "grano. De hecho es un grano “defectuoso” que no crece normalmente al estar ubicado " +
+                                      "al final de las ramas y recibir poco aporte de savia. Crece sobre sí mismo, desarrollando " +
+                                      "un solo grano redondo dentro de la cereza en lugar de los dos medios granos normales. Al estar localizado " +
+                                      "en la periferia del árbol, recibe la máxima aportación de lluvia y de luz solar. Es un café " +
+                                      "muy apreciado por su paladar maduro y afrutado.")
+            });
+
+        </script>
+    </body>
+</html>

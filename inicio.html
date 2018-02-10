@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html class="inicio">
+    <head>
+        <title>Inicio</title>
+        <link rel="stylesheet" href="./css/estilos.css" type="text/css">
+        <link rel="stylesheet" href="./css/responsive.css" type="text/css">
+        <link rel="stylesheet" href="./css/font-awesome.css" type="text/css">
+        <link rel="stylesheet" href="./css/font-awesome.min.css" type="text/css">
+        <meta charset="UTF-8">
+        <meta name="description" content="Club para los amantes del café.">
+        <meta name="keywords" content="Club,Café,Julián Marcilla,Tienda">
+        <meta name="author" content="David F.F.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Pinyon+Script" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
+    </head>
+    <body class="inicio">
+        <header>
+            <h1>Para los Amantes del Buen Café</h1>
+        </header>
+            <nav class="topnav" id="myTopnav">
+                <a id="inicio" class="active" href="./inicio.html"><i class="fa fa-home">Inicio</i></a>
+                <a id="cafe" href="./ncafes.html">Nuestros Cafés</a>
+                <a id="regalar" href="./regalar.html">Ideas para Regalar</a>
+                <a id="contacto" href="./contacto.html">Contacto</a>
+                <a id="partners" href="./partners.html">Partners</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+            </nav>
+            <main>
+                <picture>
+                    <source media="(max-width: 650px)" srcset="./img/Lliurex_anime.jpg">
+                    <source media="(max-width: 300px)" srcset="./img/Lliurex 14.jpg">
+                    <img id="principal" src="./img/Lliurex 14.jpg">
+                    <div id="coletilla">
+                        <h1 id="frase">*Preservando el legado de Julián Marcilla*</h1>
+                        <button id="inicio">¿Quieres saber más?</button>
+                    </div>
+                </picture>
+            </main>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+    </body>
+</html>

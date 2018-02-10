@@ -1,0 +1,331 @@
+/*Estilos Globales*/
+/*Parametros por Defecto*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+/*Cabecera*/
+header{
+    background-color: orange;
+    padding-top: 20px;
+	padding-bottom: 20px;
+	display: block;
+}
+
+h1{
+    font-size: 1rem;
+	text-align: center;
+}
+
+/*Navegador Responsive*/
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+	font-size: 17px;
+	font-family: 'Bitter', serif;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+/*Body*/
+body{
+    background-image: url("../img/Mancha.jpg");
+    background-repeat: repeat;
+}
+
+p{
+	font-family: 'Playball', cursive;
+	font-size: 1rem;
+}
+
+
+/*Inicio*/
+/*Quitar scroll en inicio*/
+.inicio {
+    height: 100%;
+    overflow: hidden
+}
+
+/*Imágen Responsive*/
+img#principal{
+    width: 100%;
+	height: 41rem;
+	background: linear-gradient(to bottom,rgba(0,0,0,.1) 33%,rgba(0,0,0,.8) 100%);
+}
+
+div#coletilla{
+	position: absolute;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	bottom: 5rem;
+	left: 0;
+	right: 0;
+}
+
+h1#frase{
+	font-family: 'Pinyon Script', cursive;
+	font-size: 3rem;
+	border: 4px solid orangered;
+	border-style: solid none;
+}
+
+button#inicio{
+	font-style: bold;
+	font-size: 2rem;
+	background-color: rosybrown;
+	border-color: rosybrown;
+}
+
+
+/*Nuestros Cafes*/
+img.cafes{
+	width: 10rem;
+}
+
+div#arabica{
+	text-align: center
+}
+
+div#otros{
+	text-align: center;
+}
+
+div#arabical{
+	display: none;
+}
+
+div#arabican{
+	display: none;
+}
+
+div#robusta{
+	display: none;
+}
+
+div#caracolillo{
+	display: none;
+}
+
+img#arabicaL:hover{
+	border: indigo solid 2px;
+}
+
+img#arabicaN:hover{
+	border: indigo solid 2px;
+}
+
+img#robusta:hover{
+	border: indigo solid 2px;
+}
+
+img#caracolillo:hover{
+	border: indigo solid 2px;
+}
+/*Ideas para Regalar*/
+
+.estante {
+	position: relative;
+	width: 412px;
+	border-bottom: 13px solid #24252a;
+	text-align: center;
+	padding: 0 27px;
+    margin: 20px auto;
+    background: transparent;
+}
+
+.estante:after {
+	position: absolute;
+	bottom: -13px;
+	left: 34px;
+	height: 10px;
+	background: transparent;
+	content: "";
+	-webkit-transform: perspective( 150 ) rotateX( -25deg );
+	   -moz-transform: perspective( 150 ) rotateX( -25deg );
+	    -ms-transform: perspective( 150 ) rotateX( -25deg );
+	        transform: perspective( 150 ) rotateX( -25deg );
+	right: 34px;
+	box-shadow: 0 0 17px 5px rgba(0, 0, 0, 0.7);
+	z-index: -1;
+}
+
+.estante > div {
+	border-bottom: 23px solid #303138;
+	position: relative;
+	z-index: 1;
+}
+	
+.estante > div:before {
+	content: '';
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 0 0 23px 27px;
+	border-color: transparent transparent #303138 transparent;
+	position: absolute;
+	bottom: -23px;
+	left: -27px;
+	z-index: 2;
+	-webkit-transform:rotate(360deg);
+	-moz-transform:rotate(360deg);
+	transform:rotate(360deg);
+}
+	
+.estante > div:after {
+	content: '';
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 23px 0 0 27px;
+	border-color: transparent transparent transparent #303138;
+	position: absolute;
+	bottom: -23px;
+	right: -27px;
+	z-index: 2;
+}
+	
+.estante > div > * {
+	position: relative;
+	z-index: 2;
+	top: 18px;
+}
+
+.productoc {
+	display: inline-block;
+	width: 100px;
+	border-radius: 5px;
+	position: relative;
+	z-index: 1;
+}
+
+.producto2c {
+	display: none;
+	width: 100px;
+	border-radius: 5px;
+	position: relative;
+	z-index: 1;
+}
+
+.productov {
+	display: inline-block;
+	width: 100px;
+	border-radius: 5px;
+	position: relative;
+	z-index: 1;
+}
+
+.producto2v {
+	display: none;
+	width: 100px;
+	border-radius: 5px;
+	position: relative;
+	z-index: 1;
+}
+
+img.productos{
+	width: 8rem;
+}
+
+div#flechas{
+	text-align: center;
+}
+img.flecha{
+	width: 4rem;
+}
+
+div#carrusel{
+	display: none;
+}
+
+body#productos::after{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(71, 55, 78, 0.8);
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity .3s 0s, visibility 0s .3s;
+}
+
+img#imagen{
+	width: 10rem;
+}
+
+/*Contacto*/
+form{
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 1rem;
+}
+
+textarea{
+	height: 10rem;
+}
+label{
+	text-align: center;
+}
+
+h1#contacto{
+	font-size: 1rem;
+	font-weight: bold;
+}
+
+/*Partners*/
+
+main#partners{
+	margin: 8px -16px;
+	margin: auto;
+	padding: 20px;
+}
+div.columna{
+	float: left;
+	width: 50%;
+}
+
+img.partners{
+	width: 8rem;
+}
+
+div.fila{
+	margin: 8px -16px;
+}
+
+.contenido{
+    padding: 10px;
+}
+
+.fila:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+.fila,
+.fila > .columna{
+	padding: 8px;
+}

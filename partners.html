@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Inicio</title>
+        <link rel="stylesheet" href="./css/estilos.css" type="text/css">
+        <link rel="stylesheet" href="./css/responsive.css" type="text/css">
+        <meta charset="UTF-8">
+        <meta name="description" content="Club para los amantes del café.">
+        <meta name="keywords" content="Club,Café,Julián Marcilla,Tienda">
+        <meta name="author" content="David F.F.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1>Para los Amantes del Buen Café</h1>
+        </header>
+            <nav class="topnav" id="myTopnav">
+                <a id="inicio" href="./inicio.html">Inicio</a>
+                <a id="cafe" href="./ncafes.html">Nuestros Cafés</a>
+                <a id="regalar" href="./regalar.html">Ideas para Regalar</a>
+                <a id="contacto" href="./contacto.html">Contacto</a>
+                <a id="partners" class="active" href="./partners.html">Partners</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+            </nav>
+            <main id="partners">
+                <div class="fila">
+                    <div class="columna" id="marcilla">
+                            <a href="https://www.marcilla.com/"><img class="partners" src="img/partners/Marcilla.jpeg"/></a>
+                            <p class="contenido">El cerebro detrás de este sitio web y, por lo tanto, su proveedor principal.</p>
+                    </div>
+                    <div class="columna" id="nespresso">
+                            <a href="https://www.nespresso.com/es/es/home/"><img class="partners" src="img/partners/Nespresso.png"/></a>
+                            <p class="contenido">Creadora de las mejores cafeteras del mundo. Es nuestra proveedora en este campo.</p>
+                    </div>
+                    <div class="columna" id="nescafe">
+                            <a href="https://www.nescafe.es/sueldo/"><img class="partners" src="img/partners/Nescafé.png"/></a>
+                            <p class="contenido">Un gran contribuidor en la expansión del café. Financió la creación del sitio.</p>
+                    </div>
+                    <div class="columna" id="egberts">
+                            <a href="https://www.douwe-egberts.com/"><img class="partners" src="img/partners/Douwe_Egberts.png"/></a>
+                            <p class="contenido">Distribuidor de Cafés Marcilla en el resto del mundo y, por lo tanto, mano derecha</p>
+                    </div>
+                    <div class="columna" id="dibarcafe">
+                            <a href="http://www.dibarcafe.com"><img class="partners" src="img/partners/DibarCafe.jpg"/></a>
+                            <p class="contenido">Hija de Cafés de Marcilla. Siempre allí para ayudar a su padre.</p>
+                    </div>
+                    <div class="columna" id="furryland">
+                            <a href="https://www.fernandoskaffee.com/"><img class="partners" src="img/partners/FurryLand.jpg"/></a>
+                            <p class="contenido">Un misterioso aportador que nos ayudó económicamente. Dijo que le gustaba nuestra mascota.</p>
+                    </div>
+                </div>
+            </main>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+    </body>
+</html>
