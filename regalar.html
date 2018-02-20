@@ -65,8 +65,8 @@
                         </a>
                 </div>
 
-                      <!--Modals (Ventanas emergentes hechas con Bootstrap)-->      
-                      <!--Modal de Compra (Sale cuando se hace clic en un artículo)-->
+                      <!--Modal (Ventana emergente hecha con Bootstrap)-->
+                      <!--Vista detallada de la compra-->
                       <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                           <div class="modal-content">
@@ -91,27 +91,6 @@
                           </div>
                         </div>
                       </div>
-
-                      <!--Modal de oferta (Sale cuando el artículo cuesta 30€ o más)-->
-                      <div class="modal fade" id="oferta" tabindex="-2" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <h5 class="modal-title" id="exampleModalLabel">Producto</h5>
-                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                  </button>
-                                </div>
-                                <div class="modal-body">
-                                    <p>El producto comprado tiene un precio mayor o igual a 30€. ¿Quieres unas tazas de regalo?</p>
-                                </div>
-                                <div class="modal-footer">
-                                  <button type="button" class="btn btn-primary" data-dismiss="modal">Si</button>
-                                  <button type="button" id="compra" class="btn btn-secondary">No</button>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
 
                 <!--Productos-->
                 <!--Cafeteras-->
@@ -266,16 +245,6 @@
 
                     var imagen = button.attr('src');
                     $('#imagen').attr('src',imagen);
-                });
-
-                //Al pulsar en "comprar" (...y en el caso de que el producto sea mayor-igual a 30)
-                //aparecerá un nuevo modal con una oferta de un par de vasos gratis.
-                var precio = $('#precio').html;
-                $('#compra').click(function(){
-                    if(precio >= '30'){
-                        $('#oferta').modal('show');
-                        $('#exampleModal').modal('hide');
-                    }
                 });
             });
         </script>
