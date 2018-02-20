@@ -1,34 +1,46 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Inicio</title>
+        <title>Ideas para Regalar</title>
+
+        <!--Archivos CSS-->
         <link rel="stylesheet" href="./css/estilos.css" type="text/css">
         <link rel="stylesheet" href="./css/responsive.css" type="text/css">
         <link rel="stylesheet" href="./css/bootstrap.min.css" type="text/css">
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+        <!--Scripts (JQuery y Bootstrap)-->
         <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
-        <script type="text/javascript" src="js/velocity.min.js"></script>
         <script type="text/javascript" src="js/bootstrap.js"></script>
+
+        <!--Meta-->
         <meta charset="UTF-8">
         <meta name="description" content="Club para los amantes del café.">
         <meta name="keywords" content="Club,Café,Julián Marcilla,Tienda">
         <meta name="author" content="David F.F.">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--Fuentes-->
         <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
     </head>
+
     <body id="productos">
+        <!--Logo-->
         <header>
             <h1>Para los Amantes del Buen Café</h1>
         </header>
-            <nav class="topnav" id="myTopnav">
-                <a id="inicio" href="./inicio.html">Inicio</a>
-                <a id="cafe" href="./ncafes.html">Nuestros Cafés</a>
-                <a id="regalar" class="active" href="./regalar.html">Ideas para Regalar</a>
-                <a id="contacto" href="./contacto.html">Contacto</a>
-                <a id="partners" href="./partners.html">Partners</a>
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
-            </nav>
-            <main>
 
+            <!--Navegador Responsive-->
+            <nav class="nav" id="navegador">
+                <a id="inicio" href="./inicio.html"><i class="fa fa-home"> Inicio</i></a>
+                <a id="cafe" href="./ncafes.html"><i class="fa fa-coffee"> Nuestros Cafés</i></a>
+                <a id="regalar" class="active" href="./regalar.html"><i class="fa fa-shopping-cart"> Ideas para Regalar</i></a>
+                <a id="contacto" href="./contacto.html"><i class="fa fa-envelope"> Contacto</i></a>
+                <a id="partners" href="./partners.html"><i class="fa fa-briefcase"> Partners</i></a>
+                <a href="javascript:void(0);" class="icon" onclick="nav()">&#9776;</a>
+            </nav>
+
+            <main>
                 <!--Carrusel-->
                 <div id="carrusel" class="carousel slide" data-ride="carousel">
                         <h1>Productos Destacados</h1>
@@ -52,9 +64,9 @@
                             <span class="sr-only">Siguiente</span>
                         </a>
                 </div>
-                      
-                      <!-- Modal -->
 
+                      <!--Modals (Ventanas emergentes hechas con Bootstrap)-->      
+                      <!--Modal de Compra (Sale cuando se hace clic en un artículo)-->
                       <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                           <div class="modal-content">
@@ -80,6 +92,7 @@
                         </div>
                       </div>
 
+                      <!--Modal de oferta (Sale cuando el artículo cuesta 30€ o más)-->
                       <div class="modal fade" id="oferta" tabindex="-2" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                               <div class="modal-content">
@@ -90,7 +103,7 @@
                                   </button>
                                 </div>
                                 <div class="modal-body">
-                                    <h1>El producto comprado tiene un precio mayor o igual a 30€. ¿Quieres unas tazas de regalo?</h1>
+                                    <p>El producto comprado tiene un precio mayor o igual a 30€. ¿Quieres unas tazas de regalo?</p>
                                 </div>
                                 <div class="modal-footer">
                                   <button type="button" class="btn btn-primary" data-dismiss="modal">Si</button>
@@ -101,6 +114,7 @@
                           </div>
 
                 <!--Productos-->
+                <!--Cafeteras-->
                 <section class="estante">
                     <h1>Cafeteras</h1>
                     <div>
@@ -130,11 +144,13 @@
                     </div>
                 </section>
 
+                <!--Flechas para ver otras cafeteras (Solo en modo Móvil)-->
                 <div id="flechas">
                     <img class="flecha" id="flecha_izquierdac" src="img/flecha-izquierda.png"/>
                     <img class="flecha" id="flecha_derechac" src="img/flecha-derecha.png"/>
                 </div>
 
+                <!--Vasos-->
                 <section class="estante">
                     <h1>Vasos</h1>
                     <div>
@@ -164,21 +180,27 @@
                     </div>
                 </section>
                 
+                <!--Flechas para ver otros vasos (Solo en modo Móvil)-->
                 <div id="flechas">
                     <img class="flecha" id="flecha_izquierdav" src="img/flecha-izquierda.png"/>
                     <img class="flecha" id="flecha_derechav" src="img/flecha-derecha.png"/>
                 </div>
             </main>
+
         <script>
-            function myFunction() {
-                var x = document.getElementById("myTopnav");
-                if (x.className === "topnav") {
+            /*Script Navegador: Cambia el nombre de la clase al pulsar el icono en la vista móvil,
+              haciendo que entre en vigor las modificaciones CSS hechas para la nueva clase,
+              que hacen que se despliegue el resto de secciones en la vista móvil.*/
+            function nav() {
+                var x = document.getElementById("navegador");
+                if (x.className === "nav") {
                     x.className += " responsive";
                 } else {
-                    x.className = "topnav";
+                    x.className = "nav";
                 }
             }
 
+            //Ocultar y mostrar productos a través de flechas (Solo en modo Móvil).
             $(document).ready(function() {
                 $('#flecha_izquierdac').click(function(){
                     $('.productoc').show();
@@ -202,6 +224,22 @@
                     $('.producto2v').css({'display' : 'inline-block'});
                 });
 
+                /*Resuelve un bug ocurrido a la hora de pasar del modo Móvil al modo Ordenador
+                  luego de darle a una de las flechas*/
+                  var tabletVers = window.matchMedia("only screen and (min-width: 768px)");
+                $( window ).resize(function() {
+                    if (tabletVers.matches) {
+                        $('.productoc').show();
+                        $('.producto2c').show();
+                        $('.productov').show();
+                        $('.producto2v').show();
+                    }else{
+                        $('.productoc').show();
+                        $('.producto2c').hide();
+                        $('.productov').show();
+                        $('.producto2v').hide();
+                    }
+                });
                 /*Carrusel*/
                 $('.carousel').carousel({
                     interval: 2000
@@ -214,7 +252,7 @@
                     $("#carrusel").carousel("next");
                 });
 
-                /*Vista Detallada*/
+                /*Modal (Muestra el modal e imprime datos en él)*/
                 $('#exampleModal').on('show.bs.modal', function (event) {
                     var button = $(event.relatedTarget);
 
@@ -230,6 +268,8 @@
                     $('#imagen').attr('src',imagen);
                 });
 
+                //Al pulsar en "comprar" (...y en el caso de que el producto sea mayor-igual a 30)
+                //aparecerá un nuevo modal con una oferta de un par de vasos gratis.
                 var precio = $('#precio').html;
                 $('#compra').click(function(){
                     if(precio >= '30'){

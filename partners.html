@@ -1,29 +1,46 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Inicio</title>
+        <title>Partners</title>
+
+        <!--Archivos CSS-->
         <link rel="stylesheet" href="./css/estilos.css" type="text/css">
         <link rel="stylesheet" href="./css/responsive.css" type="text/css">
+
+        <!--Iconos del navegador: Hechos con FontAwesome-->
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+        <!--Meta-->
         <meta charset="UTF-8">
         <meta name="description" content="Club para los amantes del café.">
         <meta name="keywords" content="Club,Café,Julián Marcilla,Tienda">
         <meta name="author" content="David F.F.">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--Fuentes-->
         <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
-    </head>
+    </head
+    >
     <body>
+        <!--Logo-->
         <header>
             <h1>Para los Amantes del Buen Café</h1>
         </header>
-            <nav class="topnav" id="myTopnav">
-                <a id="inicio" href="./inicio.html">Inicio</a>
-                <a id="cafe" href="./ncafes.html">Nuestros Cafés</a>
-                <a id="regalar" href="./regalar.html">Ideas para Regalar</a>
-                <a id="contacto" href="./contacto.html">Contacto</a>
-                <a id="partners" class="active" href="./partners.html">Partners</a>
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+
+            <!--Navegador Responsive-->
+            <nav class="nav" id="navegador">
+                <a id="inicio" href="./inicio.html"><i class="fa fa-home"> Inicio</i></a>
+                <a id="cafe" href="./ncafes.html"><i class="fa fa-coffee"> Nuestros Cafés</i></a>
+                <a id="regalar" href="./regalar.html"><i class="fa fa-shopping-cart"> Ideas para Regalar</i></a>
+                <a id="contacto" href="./contacto.html"><i class="fa fa-envelope"> Contacto</i></a>
+                <a id="partners" class="active" href="./partners.html"><i class="fa fa-briefcase"> Partners</i></a>
+                <a href="javascript:void(0);" class="icon" onclick="nav()">&#9776;</a>
             </nav>
+
             <main id="partners">
+
+                <!--Lista de Partners: Todos ellos están dentro de un div, los quales están dentro de un div global
+                                       con tal de hacer de más fácil su organización.-->
                 <div class="fila">
                     <div class="columna" id="marcilla">
                             <a href="https://www.marcilla.com/"><img class="partners" src="img/partners/Marcilla.jpeg"/></a>
@@ -51,13 +68,17 @@
                     </div>
                 </div>
             </main>
+
         <script>
-            function myFunction() {
-                var x = document.getElementById("myTopnav");
-                if (x.className === "topnav") {
+            /*Script Navegador: Cambia el nombre de la clase al pulsar el icono en la vista móvil,
+              haciendo que entre en vigor las modificaciones CSS hechas para la nueva clase,
+              que hacen que se despliegue el resto de secciones en la vista móvil.*/
+            function nav() {
+                var x = document.getElementById("navegador");
+                if (x.className === "nav") {
                     x.className += " responsive";
                 } else {
-                    x.className = "topnav";
+                    x.className = "nav";
                 }
             }
         </script>

@@ -1,12 +1,14 @@
+/*Estilos ul*/
 ul {
 	margin: 0;
 	padding: 0;
 	list-style: none;
 }
 
-/* basic grid, only for this demo */
-
-.align {
+/*
+	1. Alineacion de las páginas.
+*/
+.alineacion {
 	clear: both;
 	margin: 90px auto 20px;
 	width: 100%;
@@ -14,7 +16,7 @@ ul {
 	text-align: center;
 }
 
-.align > li {
+.alineacion > li {
 	width: 500px;
 	min-height: 300px;
 	display: inline-block;
@@ -23,33 +25,14 @@ ul {
 	vertical-align: top;
 }
 
-/* ///////////////////////////////////////////////////
-
-HARDCOVER
-Table of Contents
-
-1. container
-2. background & color
-3. opening cover, back cover and pages
-4. position, transform y transition
-5. events
-6. Bonus
-	- Cover design
-	- Ribbon
-	- Figcaption
-7. mini-reset
-
-/////////////////////////////////////////////////////*/
-
 /*
-	1. container
+	2. Contenedor.
 */
-
-.book {
+.libro {
 	margin-left: 200px;
 	position: relative;
-	width: 17rem; 
-	height: 420px;
+	width: 25rem; 
+	height: 30rem;
 	-webkit-perspective: 1000px;
 	-moz-perspective: 1000px;
 	perspective: 1000px;
@@ -59,59 +42,59 @@ Table of Contents
 }
 
 /*
-	2. background & color
+	3. Color de Fondo.
 */
 
-/* HARDCOVER FRONT */
-.hardcover_front li:first-child {
+/*Portada*/
+.portada li:first-child {
 	background-color: #eee;
 	-webkit-backface-visibility: hidden;
 	-moz-backface-visibility: hidden;
 	backface-visibility: hidden;
 }
 
-/* reverse */
-.hardcover_front li:last-child {
+/*Reverso*/
+.portada li:last-child {
 	background: #fffbec;
 }
 
-/* HARDCOVER BACK */
-.hardcover_back li:first-child {
+/*Contraportada*/
+.contraportada li:first-child {
 	background: #fffbec;
 }
 
-/* reverse */
-.hardcover_back li:last-child {
+/*Reverso*/
+.contraportada li:last-child {
 	background: #fffbec;
 }
 
-.book_spine li:first-child {
+.lomo li:first-child {
 	background: #eee;
 }
-.book_spine li:last-child {
+.lomo li:last-child {
 	background: #333;
 }
 
-/* thickness of cover */
+/*Grosor de la cubierta*/
 
-.hardcover_front li:first-child:after,
-.hardcover_front li:first-child:before,
-.hardcover_front li:last-child:after,
-.hardcover_front li:last-child:before,
-.hardcover_back li:first-child:after,
-.hardcover_back li:first-child:before,
-.hardcover_back li:last-child:after,
-.hardcover_back li:last-child:before,
-.book_spine li:first-child:after,
-.book_spine li:first-child:before,
-.book_spine li:last-child:after,
-.book_spine li:last-child:before {
+.portada li:first-child:after,
+.portada li:first-child:before,
+.portada li:last-child:after,
+.portada li:last-child:before,
+.contraportada li:first-child:after,
+.contraportada li:first-child:before,
+.contraportada li:last-child:after,
+.contraportada li:last-child:before,
+.lomo li:first-child:after,
+.lomo li:first-child:before,
+.lomo li:last-child:after,
+.lomo li:last-child:before {
 	background: #999;
 }
 
-/* page */
+/*Página*/
 
-.page > li {
+.paginas > li {
 	background: -webkit-linear-gradient(left, #e1ddd8 0%, #fffbf6 100%);
 	background: -moz-linear-gradient(left, #e1ddd8 0%, #fffbf6 100%);
 	background: -ms-linear-gradient(left, #e1ddd8 0%, #fffbf6 100%);
@@ -121,62 +104,62 @@ Table of Contents
 }
 
 /*
-	3. opening cover, back cover and pages
+	4. Apertura de la Portada, Contraportada y Páginas.
 */
 
-.hardcover_front {
+.portada {
 	-webkit-transform: rotateY(-34deg) translateZ(8px);
 	-moz-transform: rotateY(-34deg) translateZ(8px);
 	transform: rotateY(-34deg) translateZ(8px);
 	z-index: 100;
 }
 
-.hardcover_back {
+.contraportada {
 	-webkit-transform: rotateY(-15deg) translateZ(-8px);
 	-moz-transform: rotateY(-15deg) translateZ(-8px);
 	transform: rotateY(-15deg) translateZ(-8px);
 }
 
-.page li:nth-child(1) {
+.paginas li:nth-child(1) {
 	-webkit-transform: rotateY(-28deg);
 	-moz-transform: rotateY(-28deg);
 	transform: rotateY(-28deg);
 }
 
-.page li:nth-child(2) {
+.paginas li:nth-child(2) {
 	-webkit-transform: rotateY(-30deg);
 	-moz-transform: rotateY(-30deg);
 	transform: rotateY(-30deg);
 }
 
-.page li:nth-child(3) {
+.paginas li:nth-child(3) {
 	-webkit-transform: rotateY(-32deg);
 	-moz-transform: rotateY(-32deg);
 	transform: rotateY(-32deg);
 }
 
-.page li:nth-child(4) {
+.paginas li:nth-child(4) {
 	-webkit-transform: rotateY(-34deg);
 	-moz-transform: rotateY(-34deg);
 	transform: rotateY(-34deg);
 }
 
-.page li:nth-child(5) {
+.paginas li:nth-child(5) {
 	-webkit-transform: rotateY(-36deg);
 	-moz-transform: rotateY(-36deg);
 	transform: rotateY(-36deg);
 }
 
 /*
-	4. position, transform & transition
+	5. Posicionamiento, Transformaciones y Transiciones
 */
 
-.hardcover_front,
-.hardcover_back,
-.book_spine,
-.hardcover_front li,
-.hardcover_back li,
-.book_spine li {
+.portada,
+.contraportada,
+.lomo,
+.portada li,
+.contraportada li,
+.lomo li {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -187,21 +170,21 @@ Table of Contents
 	transform-style: preserve-3d;
 }
 
-.hardcover_front,
-.hardcover_back {
+.portada,
+.contraportada {
 	-webkit-transform-origin: 0% 100%;
 	-moz-transform-origin: 0% 100%;
 	transform-origin: 0% 100%;
 }
 
-.hardcover_front {
+.portada {
 	-webkit-transition: all 0.8s ease, z-index 0.6s;
 	-moz-transition: all 0.8s ease, z-index 0.6s;
 	transition: all 0.8s ease, z-index 0.6s;
 }
 
-/* HARDCOVER front */
-.hardcover_front li:first-child {
+/*Portada*/
+.portada li:first-child {
 	cursor: default;
 	-webkit-user-select: none;
 	-moz-user-select: none;
@@ -211,120 +194,120 @@ Table of Contents
 	transform: translateZ(2px);
 }
 
-.hardcover_front li:last-child {
+.portada li:last-child {
 	-webkit-transform: rotateY(180deg) translateZ(2px);
 	-moz-transform: rotateY(180deg) translateZ(2px);
 	transform: rotateY(180deg) translateZ(2px);
 }
 
-/* HARDCOVER back */
-.hardcover_back li:first-child {
+/*Contraportada*/
+.contraportada li:first-child {
 	-webkit-transform: translateZ(2px);
 	-moz-transform: translateZ(2px);
 	transform: translateZ(2px);
 }
 
-.hardcover_back li:last-child {
+.contraportada li:last-child {
 	-webkit-transform: translateZ(-2px);
 	-moz-transform: translateZ(-2px);
 	transform: translateZ(-2px);
 }
 
-/* thickness of cover */
-.hardcover_front li:first-child:after,
-.hardcover_front li:first-child:before,
-.hardcover_front li:last-child:after,
-.hardcover_front li:last-child:before,
-.hardcover_back li:first-child:after,
-.hardcover_back li:first-child:before,
-.hardcover_back li:last-child:after,
-.hardcover_back li:last-child:before,
-.book_spine li:first-child:after,
-.book_spine li:first-child:before,
-.book_spine li:last-child:after,
-.book_spine li:last-child:before {
+/*Grosor de la cubierta*/
+.portada li:first-child:after,
+.portada li:first-child:before,
+.portada li:last-child:after,
+.portada li:last-child:before,
+.contraportada li:first-child:after,
+.contraportada li:first-child:before,
+.contraportada li:last-child:after,
+.contraportada li:last-child:before,
+.lomo li:first-child:after,
+.lomo li:first-child:before,
+.lomo li:last-child:after,
+.lomo li:last-child:before {
 	position: absolute;
 	top: 0;
 	left: 0;
 }
 
-/* HARDCOVER front */
-.hardcover_front li:first-child:after,
-.hardcover_front li:first-child:before {
+/*Portada*/
+.portada li:first-child:after,
+.portada li:first-child:before {
 	width: 4px;
 	height: 100%;
 }
 
-.hardcover_front li:first-child:after {
+.portada li:first-child:after {
 	-webkit-transform: rotateY(90deg) translateZ(-2px) translateX(2px);
 	-moz-transform: rotateY(90deg) translateZ(-2px) translateX(2px);
 	transform: rotateY(90deg) translateZ(-2px) translateX(2px);
 }
 
-.hardcover_front li:first-child:before {
+.portada li:first-child:before {
 	-webkit-transform: rotateY(90deg) translateZ(158px) translateX(2px);
 	-moz-transform: rotateY(90deg) translateZ(158px) translateX(2px);
 	transform: rotateY(90deg) translateZ(158px) translateX(2px);
 }
 
-.hardcover_front li:last-child:after,
-.hardcover_front li:last-child:before {
+.portada li:last-child:after,
+.portada li:last-child:before {
 	width: 4px;
 	height: 160px;
 }
 
-.hardcover_front li:last-child:after {
+.portada li:last-child:after {
 	-webkit-transform: rotateX(90deg) rotateZ(90deg) translateZ(80px) translateX(-2px) translateY(-78px);
 	-moz-transform: rotateX(90deg) rotateZ(90deg) translateZ(80px) translateX(-2px) translateY(-78px);
 	transform: rotateX(90deg) rotateZ(90deg) translateZ(80px) translateX(-2px) translateY(-78px);
 }
-.hardcover_front li:last-child:before {
+.portada li:last-child:before {
 	box-shadow: 0px 0px 30px 5px #333;
 	-webkit-transform: rotateX(90deg) rotateZ(90deg) translateZ(-140px) translateX(-2px) translateY(-78px);
 	-moz-transform: rotateX(90deg) rotateZ(90deg) translateZ(-140px) translateX(-2px) translateY(-78px);
 	transform: rotateX(90deg) rotateZ(90deg) translateZ(-140px) translateX(-2px) translateY(-78px);
 }
 
-/* thickness of cover */
+/*Grosor de la cubierta*/
 
-.hardcover_back li:first-child:after,
-.hardcover_back li:first-child:before {
+.contraportada li:first-child:after,
+.contraportada li:first-child:before {
 	width: 4px;
 	height: 100%;
 }
 
-.hardcover_back li:first-child:after {
+.contraportada li:first-child:after {
 	-webkit-transform: rotateY(90deg) translateZ(-2px) translateX(2px);
 	-moz-transform: rotateY(90deg) translateZ(-2px) translateX(2px);
 	transform: rotateY(90deg) translateZ(-2px) translateX(2px);
 }
-.hardcover_back li:first-child:before {
+.contraportada li:first-child:before {
 	-webkit-transform: rotateY(90deg) translateZ(158px) translateX(2px);
 	-moz-transform: rotateY(90deg) translateZ(158px) translateX(2px);
 	transform: rotateY(90deg) translateZ(158px) translateX(2px);
 }
 
-.hardcover_back li:last-child:after,
-.hardcover_back li:last-child:before {
+.contraportada li:last-child:after,
+.contraportada li:last-child:before {
 	width: 4px;
 	height: 160px;
 }
 
-.hardcover_back li:last-child:after {
+.contraportada li:last-child:after {
 	-webkit-transform: rotateX(90deg) rotateZ(90deg) translateZ(80px) translateX(2px) translateY(-78px);
 	-moz-transform: rotateX(90deg) rotateZ(90deg) translateZ(80px) translateX(2px) translateY(-78px);
 	transform: rotateX(90deg) rotateZ(90deg) translateZ(80px) translateX(2px) translateY(-78px);
 }
 
-.hardcover_back li:last-child:before {
+.contraportada li:last-child:before {
 	box-shadow: 10px -1px 80px 20px #666;
 	-webkit-transform: rotateX(90deg) rotateZ(90deg) translateZ(-140px) translateX(2px) translateY(-78px);
 	-moz-transform: rotateX(90deg) rotateZ(90deg) translateZ(-140px) translateX(2px) translateY(-78px);
 	transform: rotateX(90deg) rotateZ(90deg) translateZ(-140px) translateX(2px) translateY(-78px);
 }
 
-/* BOOK SPINE */
-.book_spine {
+/*Lomo*/
+.lomo {
 	-webkit-transform: rotateY(60deg) translateX(-5px) translateZ(-12px);
 	-moz-transform: rotateY(60deg) translateX(-5px) translateZ(-12px);
 	transform: rotateY(60deg) translateX(-5px) translateZ(-12px);
@@ -332,58 +315,58 @@ Table of Contents
 	z-index: 0;
 }
 
-.book_spine li:first-child {
+.lomo li:first-child {
 	-webkit-transform: translateZ(2px);
 	-moz-transform: translateZ(2px);
 	transform: translateZ(2px);
 }
 
-.book_spine li:last-child {
+.lomo li:last-child {
 	-webkit-transform: translateZ(-2px);
 	-moz-transform: translateZ(-2px);
 	transform: translateZ(-2px);
 }
 
-/* thickness of book spine */
-.book_spine li:first-child:after,
-.book_spine li:first-child:before {
+/*Grosor del lomo*/
+.lomo li:first-child:after,
+.lomo li:first-child:before {
 	width: 4px;
 	height: 100%;
 }
 
-.book_spine li:first-child:after {
+.lomo li:first-child:after {
 	-webkit-transform: rotateY(90deg) translateZ(-2px) translateX(2px);
 	-moz-transform: rotateY(90deg) translateZ(-2px) translateX(2px);
 	transform: rotateY(90deg) translateZ(-2px) translateX(2px);
 }
 
-.book_spine li:first-child:before {
+.lomo li:first-child:before {
 	-webkit-transform: rotateY(-90deg) translateZ(-12px);
 	-moz-transform: rotateY(-90deg) translateZ(-12px);
 	transform: rotateY(-90deg) translateZ(-12px);
 }
 
-.book_spine li:last-child:after,
-.book_spine li:last-child:before {
+.lomo li:last-child:after,
+.lomo li:last-child:before {
 	width: 4px;
 	height: 16px;
 }
 
-.book_spine li:last-child:after {
+.lomo li:last-child:after {
 	-webkit-transform: rotateX(90deg) rotateZ(90deg) translateZ(8px) translateX(2px) translateY(-6px);
 	-moz-transform: rotateX(90deg) rotateZ(90deg) translateZ(8px) translateX(2px) translateY(-6px);
 	transform: rotateX(90deg) rotateZ(90deg) translateZ(8px) translateX(2px) translateY(-6px);
 }
 
-.book_spine li:last-child:before {
+.lomo li:last-child:before {
 	box-shadow: 5px -1px 100px 40px rgba(0, 0, 0, 0.2);
 	-webkit-transform: rotateX(90deg) rotateZ(90deg) translateZ(-210px) translateX(2px) translateY(-6px);
 	-moz-transform: rotateX(90deg) rotateZ(90deg) translateZ(-210px) translateX(2px) translateY(-6px);
 	transform: rotateX(90deg) rotateZ(90deg) translateZ(-210px) translateX(2px) translateY(-6px);
 }
 
-.page,
-.page > li {
+.paginas,
+.paginas > li {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -392,7 +375,7 @@ Table of Contents
 	transform-style: preserve-3d;
 }
 
-.page {
+.paginas {
 	width: 100%;
 	height: 98%;
 	top: 1%;
@@ -400,7 +383,7 @@ Table of Contents
 	z-index: 10;
 }
 
-.page > li {
+.paginas > li {
 	width: 100%;
 	height: 100%;
 	-webkit-transform-origin: left center;
@@ -414,31 +397,31 @@ Table of Contents
 	transition-timing-function: ease;
 }
 
-.page > li:nth-child(1) {
+.paginas > li:nth-child(1) {
 	-webkit-transition-duration: 0.6s;
 	-moz-transition-duration: 0.6s;
 	transition-duration: 0.6s;
 }
 
-.page > li:nth-child(2) {
+.paginas > li:nth-child(2) {
 	-webkit-transition-duration: 0.6s;
 	-moz-transition-duration: 0.6s;
 	transition-duration: 0.6s;
 }
 
-.page > li:nth-child(3) {
+.paginas > li:nth-child(3) {
 	-webkit-transition-duration: 0.4s;
 	-moz-transition-duration: 0.4s;
 	transition-duration: 0.4s;
 }
 
-.page > li:nth-child(4) {
+.paginas > li:nth-child(4) {
 	-webkit-transition-duration: 0.5s;
 	-moz-transition-duration: 0.5s;
 	transition-duration: 0.5s;
 }
 
-.page > li:nth-child(5) {
+.paginas > li:nth-child(5) {
 	-webkit-transition-duration: 0.6s;
 	-moz-transition-duration: 0.6s;
 	transition-duration: 0.6s;
@@ -447,12 +430,10 @@ Table of Contents
 
 
 /*
-	6. Bonus
+	6. Cubierta CSS
 */
 
-/* cover CSS */
-
-.coverDesign {
+.diseñoCubierta {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -465,7 +446,7 @@ Table of Contents
 	backface-visibility: hidden;
 }
 
-.coverDesign::after {
+.diseñoCubierta::after {
 	background-image: -webkit-linear-gradient( -135deg, rgba(255, 255, 255, 0.45) 0%, transparent 100%);
 	background-image: -moz-linear-gradient( -135deg, rgba(255, 255, 255, 0.45) 0%, transparent 100%);
 	background-image: linear-gradient( -135deg, rgba(255, 255, 255, 0.45) 0%, transparent 100%);
@@ -476,7 +457,7 @@ Table of Contents
 	right: 0;
 }
 
-.coverDesign h1 {
+.diseñoCubierta h1 {
 	color: #fff;
 	font-size: 2.2em;
 	letter-spacing: 0.05em;
@@ -485,38 +466,9 @@ Table of Contents
 	text-shadow: -1px -1px 0 rgba(0,0,0,0.1);
 }
 
-.coverDesign p {
+.diseñoCubierta p {
 	color: #f8f8f8;
 	font-size: 1em;
 	text-align: center;
 	text-shadow: -1px -1px 0 rgba(0,0,0,0.1);
-}
-
-/* figcaption */
-
-figcaption {
-	padding-left: 40px;
-	text-align: left;
-	position: absolute;
-	top: 0%;
-	left: 160px;
-	width: 310px;
-	-webkit-backface-visibility: hidden;
-	-moz-backface-visibility: hidden;
-	backface-visibility: hidden;
-}
-
-figcaption h1 {
-	margin: 0;
-}
-
-figcaption span {
-	color: #16a085;
-	padding: 0.6em 0 1em 0;
-	display: block;
-}
-
-figcaption p {
-	color: #63707d;
-	line-height: 1.3;
 }

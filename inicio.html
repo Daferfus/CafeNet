@@ -2,50 +2,176 @@
 <html class="inicio">
     <head>
         <title>Inicio</title>
+
+        <!--Archivos CSS-->
         <link rel="stylesheet" href="./css/estilos.css" type="text/css">
         <link rel="stylesheet" href="./css/responsive.css" type="text/css">
-        <link rel="stylesheet" href="./css/font-awesome.css" type="text/css">
-        <link rel="stylesheet" href="./css/font-awesome.min.css" type="text/css">
+        
+        <!--Iconos del navegador: Hechos con FontAwesome-->
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+        <!--Scripts (JQuery y Bootstrap)-->
+        <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+        <script type="text/javascript" src="js/bootstrap.js"></script>
+
+        <!--Meta-->
         <meta charset="UTF-8">
         <meta name="description" content="Club para los amantes del café.">
         <meta name="keywords" content="Club,Café,Julián Marcilla,Tienda">
         <meta name="author" content="David F.F.">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--Fuentes-->
         <link href="https://fonts.googleapis.com/css?family=Pinyon+Script" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
     </head>
+
     <body class="inicio">
+        <!--Logo-->
         <header>
             <h1>Para los Amantes del Buen Café</h1>
         </header>
-            <nav class="topnav" id="myTopnav">
-                <a id="inicio" class="active" href="./inicio.html"><i class="fa fa-home">Inicio</i></a>
-                <a id="cafe" href="./ncafes.html">Nuestros Cafés</a>
-                <a id="regalar" href="./regalar.html">Ideas para Regalar</a>
-                <a id="contacto" href="./contacto.html">Contacto</a>
-                <a id="partners" href="./partners.html">Partners</a>
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+
+            <!--Navegador Responsive-->
+            <nav class="nav" id="navegador">
+                <a id="inicio" class="active" href="./inicio.html"><i class="fa fa-home"> Inicio</i></a>
+                <a id="cafe" href="./ncafes.html"><i class="fa fa-coffee"> Nuestros Cafés</i></a>
+                <a id="regalar" href="./regalar.html"><i class="fa fa-shopping-cart"> Ideas para Regalar</i></a>
+                <a id="contacto" href="./contacto.html"><i class="fa fa-envelope"> Contacto</i></a>
+                <a id="partners" href="./partners.html"><i class="fa fa-briefcase"> Partners</i></a>
+                <a href="javascript:void(0);" class="icon" onclick="nav()">&#9776;</a>
             </nav>
+
             <main>
+                <!--Primera Zona-->
+                <!--Imágen Responsive-->
                 <picture>
                     <source media="(max-width: 650px)" srcset="./img/Lliurex_anime.jpg">
                     <source media="(max-width: 300px)" srcset="./img/Lliurex 14.jpg">
                     <img id="principal" src="./img/Lliurex 14.jpg">
                     <div id="coletilla">
                         <h1 id="frase">*Preservando el legado de Julián Marcilla*</h1>
-                        <button id="inicio">¿Quieres saber más?</button>
+                        <button id="teletransporte"></button>
                     </div>
                 </picture>
+                
+                <!--Segunda Zona-->
+                <!--Versión Móvil-->
+                <section id="movil">
+                    <!--Comic-->
+                    <div class="panel">
+                        <img id="panel1" class="vinyeta" src="img/comic/panel1.jpg">
+                        <p class="descripcion">La historia de Marcilla comenzó en 1912, cuando tenía 14 años.
+                                               Llegó de Alzira a Barcelona con su padre y un carro con el
+                                               que repartía leña o carbón.</p>
+                        <button class="historia"><a href="#panel2">Siguiente</a></button>
+                    </div>
+
+                    <div class="panel">
+                        <img id="panel2" class="vinyeta" src="img/comic/panel2.jpg">
+                        <p class="descripcion"> Marcilla empezó a tostar café: “Café rico”, decía, y lo vendía
+                                                en paquetes de 25 gramos, a los que bautizó con la marca Cafés
+                                                a la Crema Marcilla.</p>
+                        <button class="historia"><a href="#panel3">Siguiente</a></button>
+                    </div>
+
+                    <div class="panel">
+                        <img id="panel3" class="vinyeta" src="img/comic/panel3.png">
+                        <p class="descripcion">El negocio creció, tropezó con la guerra y lo volvió a levantar.</p>
+                        <button class="historia"><a href="#panel4">Siguiente</a></button>
+                    </div>
+
+                    <div class="panel">
+                        <img id="panel4" class="vinyeta" src="img/comic/panel4.jpg">
+                        <p class="descripcion">Pero fueron sus dos hijos, Félix y Enrique Marcilla Pagés, quienes
+                                               le dieron un nuevo impulso: en los años sesenta compraron maquinaria
+                                               en Alemania y modernizaron la fábrica del barrio de Sant Andreu.</p>
+                        <button class="historia"><a href="#panel5">Siguiente</a></button>
+                    </div>
+
+                    <div class="panel">                    
+                        <img id="panel5" class="vinyeta" src="img/comic/panel5.jpg">
+                        <p class="descripcion"> Llegó la holandesa Douwe Egbers, y “compró primero el 40% y
+                                                en 1985 se quedó la compañía”.</p>
+                        <button class="historia"><a href="#panel6">Siguiente</a></button>
+                    </div>
+
+                    <div class="panel">
+                        <img id="panel6" class="vinyeta" src="img/comic/panel6.jpg">
+                        <p class="descripcion">Ahora 30 años después, los hijos de Julián Marcilla realizan la ilusión de su
+                                               padre centralizando en un mismo lugar las mejores marcas de café del Mundo.</p>
+                        <button class="historia"><a href="#formulario"><strong>Bienvenidos al sueño de Julián Marcilla.</strong></a></button>
+                    </div>
+
+                    <!--Formulario de Subscripción-->
+                    <div id="formulario">
+                        <div id="titulo-form">
+                            <h1>¡¡¡Subscribete a CafeNet!!!</h1>
+                        </div>
+                        <div id="cuerpo">
+                            <label>Escribe tu Correo Electrónico:</label>
+                            <input type="email"/>
+                        </div>
+                    </div>
+                </section>
+
+                <!--Segunda Zona-->
+                <!--Versión Tablet/Ordenador-->
+                <section id="ordenador">
+                    <!--Comic-->
+                    <div>
+                        <img class="pergamino" id="pergamino1" src="./img/comic/Pergamino1.png"/>
+                    </div>
+                    <button class="historia"><a href="#pergamino2">Siguiente</a></button>
+
+                    <div>
+                        <img class="pergamino" id="pergamino2" src="./img/comic/Pergamino2.png"/>
+                    </div>     
+                    <button class="historia"><a href="#formulario2"><strong>Bienvenidos al sueño de Julián Marcilla.</strong></a></button>
+
+                    <!--Formulario de Subscripción-->
+                    <div id="formulario2">
+                        <div id="titulo-form2">
+                            <h1>¡¡¡Subscribete a CafeNet!!!</h1>
+                        </div>
+                        <div id="cuerpo2">
+                            <label>Escribe tu Correo Electrónico:</label>
+                            <input type="email2"/>
+                        </div>
+                    </div>
+                </section>
             </main>
+
         <script>
-            function myFunction() {
-                var x = document.getElementById("myTopnav");
-                if (x.className === "topnav") {
+            /*Script Navegador: Cambia el nombre de la clase al pulsar el icono en la vista móvil,
+              haciendo que entre en vigor las modificaciones CSS hechas para la nueva clase,
+              que hacen que se despliegue el resto de secciones en la vista móvil.*/
+            function nav() {
+                var x = document.getElementById("navegador");
+                if (x.className === "nav") {
                     x.className += " responsive";
                 } else {
-                    x.className = "topnav";
+                    x.className = "nav";
                 }
             }
+
+            var movilVers = window.matchMedia("only screen and (max-width: 767px)");
+
+            $(document).ready(function() {
+                if(movilVers.match){
+                    $('#teletransporte').html("<a href='#panel1'>¿Quieres saber más?</a>")
+                }else{
+                    $('#teletransporte').html("<a href='#pergamino1'>¿Quieres saber más?</a>")
+                }
+
+                $( window ).resize(function() {
+                    if (movilVers.matches) {
+                        $('#teletransporte').html("<a href='#olado'>¿Quieres saber más?</a>")
+                    }else{
+                        $('#teletransporte').html("<a href='#pergamino1'>¿Quieres saber más?</a>")
+                    }
+                });
+            });
         </script>
     </body>
 </html>
