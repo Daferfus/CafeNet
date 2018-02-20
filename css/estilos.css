@@ -9,11 +9,14 @@
 /*Cabecera*/
 header{
     background-color: orange;
-    padding-top: 20px;
-	padding-bottom: 20px;
 	display: block;
+	text-align: center
 }
 
+img#logo{
+	width: 10rem;
+	text-align: center;
+}
 h1{
     font-size: 2rem;
 	text-align: center;
@@ -130,24 +133,7 @@ button.historia{
 	margin-bottom: 2.5rem;
 }
 
-/*Formulario de Subscripción*/
-
-div#titulo-form{
-	background-color: orangered;
-}
-div#formulario{
-	background-color: yellow;
-	padding-bottom: 2rem;
-}
-
-div#cuerpo{
-	text-align: center;
-	padding-top: 1rem;
-	font-size: 1.5rem;
-}
-
-input{
-	margin-top: 20px;
+img#flecha{
 	width: 20rem;
 }
 /*Nuestros Cafes*/

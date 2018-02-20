@@ -29,7 +29,7 @@
     <body class="inicio">
         <!--Logo-->
         <header>
-            <h1>Para los Amantes del Buen Café</h1>
+            <img id="logo" src="./img/Logo.png"/>
         </header>
 
             <!--Navegador Responsive-->
@@ -46,9 +46,9 @@
                 <!--Primera Zona-->
                 <!--Imágen Responsive-->
                 <picture>
-                    <source media="(max-width: 650px)" srcset="./img/Lliurex_anime.jpg">
-                    <source media="(max-width: 300px)" srcset="./img/Lliurex 14.jpg">
-                    <img id="principal" src="./img/Lliurex 14.jpg">
+                    <source media="(max-width: 650px)" srcset="./img/principal_movil.jpg">
+                    <source media="(max-width: 300px)" srcset="./img/principal_ordenador.jpg">
+                    <img id="principal" src="./img/principal_ordenador.jpg">
                     <div id="coletilla">
                         <h1 id="frase">*Preservando el legado de Julián Marcilla*</h1>
                         <button id="teletransporte"></button>
@@ -100,19 +100,10 @@
                         <img id="panel6" class="vinyeta" src="img/comic/panel6.jpg">
                         <p class="descripcion">Ahora 30 años después, los hijos de Julián Marcilla realizan la ilusión de su
                                                padre centralizando en un mismo lugar las mejores marcas de café del Mundo.</p>
-                        <button class="historia"><a href="#formulario"><strong>Bienvenidos al sueño de Julián Marcilla.</strong></a></button>
+                        <button class="historia"><a href="#flecha"><strong>Bienvenidos al sueño de Julián Marcilla.</strong></a></button>
                     </div>
 
-                    <!--Formulario de Subscripción-->
-                    <div id="formulario">
-                        <div id="titulo-form">
-                            <h1>¡¡¡Subscribete a CafeNet!!!</h1>
-                        </div>
-                        <div id="cuerpo">
-                            <label>Escribe tu Correo Electrónico:</label>
-                            <input type="email"/>
-                        </div>
-                    </div>
+                    <a href="#logo"><img id="flecha" src="./img/flecha2.png"/></a>
                 </section>
 
                 <!--Segunda Zona-->
@@ -127,18 +118,13 @@
                     <div>
                         <img class="pergamino" id="pergamino2" src="./img/comic/pergamino2.png"/>
                     </div>     
-                    <button class="historia"><a href="#formulario2"><strong>Bienvenidos al sueño de Julián Marcilla.</strong></a></button>
+                    <button class="historia"><a href="#programacion"><strong>Bienvenidos al sueño de Julián Marcilla.</strong></a></button>
 
-                    <!--Formulario de Subscripción-->
-                    <div id="formulario2">
-                        <div id="titulo-form2">
-                            <h1>¡¡¡Subscribete a CafeNet!!!</h1>
-                        </div>
-                        <div id="cuerpo2">
-                            <label>Escribe tu Correo Electrónico:</label>
-                            <input type="email2"/>
-                        </div>
+                    <div>
+                        <img class="pergamino" id="programacion" src="./img/programa.png"/>
                     </div>
+
+                    <a href="#logo"><img id="flecha" src="./img/flecha2.png"/></a>
                 </section>
             </main>
 
@@ -166,7 +152,7 @@
 
                 $( window ).resize(function() {
                     if (movilVers.matches) {
-                        $('#teletransporte').html("<a href='#olado'>¿Quieres saber más?</a>")
+                        $('#teletransporte').html("<a href='#panel1'>¿Quieres saber más?</a>")
                     }else{
                         $('#teletransporte').html("<a href='#pergamino1'>¿Quieres saber más?</a>")
                     }

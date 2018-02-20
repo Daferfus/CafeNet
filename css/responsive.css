@@ -44,26 +44,7 @@
         padding-top: 4rem;
     }
 
-    /*Formulario de Subscripción*/
-
-    div#titulo-form2{
-        background-color: orangered;
-    }
-    div#formulario2{
-        background-color: yellow;
-        padding-bottom: 2rem;
-        margin-left: 20rem;
-        margin-right: 20rem;
-    }
-
-    div#cuerpo2{
-        text-align: center;
-        padding-top: 1rem;
-        font-size: 1.5rem;
-    }
-
-    input{
-        margin-top: 20px;
+    img#flecha{
         width: 20rem;
     }
     
